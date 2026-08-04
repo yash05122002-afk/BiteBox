@@ -64,7 +64,7 @@ border-bottom: 2px solid red;
 
 .hero {
 height: 90vh;
-background: url(../image/biteboxbanner.img.jpg) no-repeat center/cover;
+background: url(image/biteboxbanner.img.jpg) no-repeat center/cover;
 display:flex;
 justify-content: center;
 align-items: center;
@@ -572,7 +572,7 @@ margin-top: 15px;
    background: red;
    color: #cccccc;
 }
-
+/* Responsive Website */
 @media(max-width: 768px){
    /* HEADER */
 header{
@@ -612,6 +612,7 @@ nav ul li a{
    padding: 10px;
    border-bottom: 1px solid #333;
 }
+
 
 /* LOGIN BUTTON */
 nav li :last-child a{

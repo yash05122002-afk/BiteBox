@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOgin</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/4713f18eb9.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="image/favicon/favicon.ico">
 </head>
+
 <body>
     <header>
-<nav>
+        <nav>
 
-<!--This is Logo-->
-<img src="image/image.png" alt="logo" width="170px">
-<ul>
-<li><a href="home.html"class="active">Home</a></li>
-<li><a href="menu.html">Menu</a></li>
-<li><a href="biteDeals.html">BiteDeals</a></li>
-<li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Cart</a></li>
-<li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a></li>
-</ul>
+            <!--This is Logo-->
+            <img src="css/image/image.png" alt="logo" width="170px">
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="biteDeals.html">BiteDeals</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Cart</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a></li>
+            </ul>
 
-</nav>
-</header>
+        </nav>
+    </header>
 
-<!--Start Authentication Section-->
+    <!--Start Authentication Section-->
 
-<section class="auth-container">
-<div class="auth-box">
-<h2>Login to Bite <span>box</span></h2>
-<form>
-<input type="email" placeholder="Enter Email required">
-<input type="password" placeholder="Enter password">
+    <section class="auth-container">
+        <div class="auth-box">
+            <h2>Login to Bite <span>box</span></h2>
+            <form>
+                <input type="email" placeholder="Enter Email" id="email" required>
+                <div style="position: relative">
+                    <input type="password" placeholder="Enter password" id="password" required>
+
+                    <span onclick="togglePassword()"
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                        <i class="fa-regular fa-eye"></i>
+                    </span>
+                </div>
+                <button type="submit" onclick="login()">Login</button>
+
+            </form>
+            <p id="error" style="color: red" ;></p>
+            <p><a href="signup.html">Forgot Password</a></p>
+            <p>Don't have an account?<a href="signup.html">Signup</a></p>
+
+        </div>
+    </section>
 
 
-
-<button type="submit">Login</button>
-
-</form>
-<p><a href="signup.html">Forgot Password</a></p>
-<p>Don't have an account?<a href="signup.html">Signup</a></p>
-
-</div>
-</section>
-<!--End of authentication section-->
+    <script src="js/scripts.js"></script>
+    <!--End of authentication section-->
 </body>
+
 </html>

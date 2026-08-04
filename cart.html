@@ -1,132 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/4713f18eb9.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="image/favicon/favicon.ico">
 </head>
+
 <body>
     <header>
-<nav>
+        <nav>
 
-<!--This is Logo-->
-<img src="image/image.png" alt="logo" width="170px">
-<ul>
-<li><a href="home.html"class="active">Home</a></li>
-<li><a href="menu.html">Menu</a></li>
-<li><a href="biteDeals.html">BiteDeals</a></li>
-<li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Cart</a></li>
-<li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a></li>
-</ul>
-
-
-</nav>
-</header>
-<!-- start cart section -->
-  <section class="cart">
-   <h2>Your Cart</h2>
-
-   <table>
-    
-   <thead>
-
-<th>Item</th>
-     <th>Price</th>
-    <th>Qty</th>
-    <th>Total</th>
- <th>Remove</th>
-
-   </thead>
-
-    <tbody>
-    <tr>
-    <td class="item">
-          <img src="image/burgercheese.image.png">
-            <div>
-            <h4> Chessey Burger</h4>
-            <p>Hot Burger</p>
-            </div>
-    </td>
-        <td>₹100</td>
-
-    <td>
-        <div class="qty-box">
-<button>-</button>
-<span>1</span>
-<button>+</button>
-        </div>
-    </td>
-
-    <td>₹100</td>
-    <td><button class="remove">❌</button></td>
-    </tr>
+            <!--This is Logo-->
+            <img src="css/image/image.png" alt="logo" width="170px">
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="biteDeals.html">BiteDeals</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Cart</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a></li>
+            </ul>
 
 
+        </nav>
+    </header>
+    <!-- start cart section -->
+    <section class="cart">
+        <h2>Your Cart</h2>
+
+        <table>
+
+            <thead>
+
+                <th>Item</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Remove</th>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="item">
+                        <img src="css/image/burgercheese.image.png">
+                        <div>
+                            <h4> Chessey Burger</h4>
+                            <p>Hot Burger</p>
+                        </div>
+                    </td>
+                    <td>₹100</td>
+
+                    <td>
+                        <div class="qty-box">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </td>
+
+                    <td>₹100</td>
+                    <td><button class="remove">❌</button></td>
+                </tr>
 
 
 
 
-<tr>
-
-<td class="item">
-<img src="image/cake.image.png">
-<div>
-<h4> Cake</h4>
-<p>Delecious Cake</p>
-</div>
-</td>
-<td>₹600</td>
-
-<td>
-<div class="qty-box">
-<button>-</button>
-<span>1</span>
-<button>+</button>
-</div>
-</td>
-
-<td>₹600</td>
-<td><button class="remove">❌</button></td>
-</tr>
 
 
-<tr>
-<td class="item">
-<img src="image/Cheesypasta.image.png">
-<div>
-<h4> Pasta</h4>
-<p>Cheesy pasta</p>
-</div>
-</td>
-<td>₹199</td>
+                <tr>
 
-<td>
-<div class="qty-box">
-<button>-</button>
-<span>1</span>
-<button>+</button>
-</div>
-</td>
+                    <td class="item">
+                        <img src="css/image/cake.image.png">
+                        <div>
+                            <h4> Cake</h4>
+                            <p>Delecious Cake</p>
+                        </div>
+                    </td>
+                    <td>₹600</td>
 
-<td>₹199</td>
-<td><button class="remove">❌</button></td>
+                    <td>
+                        <div class="qty-box">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </td>
 
-</tr>
+                    <td>₹600</td>
+                    <td><button class="remove">❌</button></td>
+                </tr>
+
+
+                <tr>
+                    <td class="item">
+                        <img src="css/image/Cheesypasta.image.png">
+                        <div>
+                            <h4> Pasta</h4>
+                            <p>Cheesy pasta</p>
+                        </div>
+                    </td>
+                    <td>₹199</td>
+
+                    <td>
+                        <div class="qty-box">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </td>
+
+                    <td>₹199</td>
+                    <td><button class="remove">❌</button></td>
+
+                </tr>
 
 
 
-<tr class="grand-total">
-<td colspan="3">Grand total</td>
-<td>₹899</td>
-<td><button>Proceed</button></td>
+                <tr class="grand-total">
+                    <td colspan="3">Grand total</td>
+                    <td>₹899</td>
+                    <td><button>Proceed</button></td>
 
-</tr>
+                </tr>
 
-</tbody>
-</table>
+            </tbody>
+        </table>
 
 </body>
+
 </html>
