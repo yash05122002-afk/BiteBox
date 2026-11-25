@@ -1,144 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Home</title>
-   <link rel="stylesheet" href="css/style.css">
-   <script src="https://kit.fontawesome.com/4713f18eb9.js" crossorigin="anonymous"></script>
-   <link rel="icon" type="image/x-icon" href="image/favicon/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiteBox | Fresh Flavors Delivered Fast</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="css/image/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="css/image/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="css/image/favicon/favicon-16x16.png">
+  <link rel="manifest" href="css/image/favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-   <!--This is Header-->
-   <header>
-      <nav>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand"><i class="fa-solid fa-burger" style="color: var(--primary);"></i> Bite<span>Box</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="biteDeals.html">Bite Deals</a></li>
+        <li><a href="track.html">Track Order</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn" aria-label="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <div id="auth-slot" style="display:flex; align-items:center; gap:10px;">
+          <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+        </div>
+        <button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
 
-         <!--This is Logo-->
-         <img src="css/image/image.png" alt="logo" width="170px">
-         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="biteDeals.html">BiteDeals</a></li>
-            <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Cart</a></li>
-            <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a></li>
-         </ul>
-
-
-      </nav>
-   </header>
-
-   <!-- end of header section-->
-   <!--start hero section-->
-
-   <section class="hero">
-
+  <section class="hero">
+    <div class="container">
       <div class="hero-content">
-
-         <h1> Delicious Food Delivered Fast</h1>
-         <p>Order your favorite meals anytime,anywhere</p>
-         <button>Order Now</button>
+        <span class="hero-tag">Hot & Fresh in 30 Mins</span>
+        <h1>Cravings Met with <span>Bold Flavors</span></h1>
+        <p>From sizzling biryani and cheesy wood-fired pizzas to crispy momos and artisanal desserts—crafted fresh and delivered straight to your door.</p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-primary">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="biteDeals.html" class="btn btn-secondary">Explore Deals</a>
+        </div>
       </div>
+    </div>
+  </section>
 
-   </section>
-
-
-   <!--Start video section-->
-   <section class="video-section">
-      <!-- Left Side-->
-      <div class="video-text">
-         <h2>Our Food Story</h2>
-         <p>
-            Experience the taste of delecious meals crafted with love. From burgers to pizzas we deliver happiness at
-            your doorstep.
-
-         </p>
+  <section class="section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>30-Min Delivery</h3>
+          <p style="font-size:0.88rem; color:var(--dark-muted);">Piping hot meals delivered right on schedule.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Fresh Ingredients</h3>
+          <p style="font-size:0.88rem; color:var(--dark-muted);">Locally sourced produce & authentic spices daily.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+          <h3>Daily Combo Deals</h3>
+          <p style="font-size:0.88rem; color:var(--dark-muted);">Use code <strong>BITE20</strong> for 20% off your order.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!--Right Side-->
-
-      <div class="video-box">
-         <video autoplay muted loop playsinline>
-            <source src="css/image/media/food video.mp4" type="video/mp4">
-         </video>
+  <section class="section" style="padding-top: 10px;">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Customer Favorites</h2>
+          <p>Top-rated dishes flying out of our kitchen today.</p>
+        </div>
+        <a href="menu.html" class="btn btn-outline">View Full Menu</a>
       </div>
-   </section>
+      <div class="grid" id="featured-grid"></div>
+    </div>
+  </section>
 
-   <!--Start about section-->
-   <section class="about">
-      <h2> Who we are</h2>
-      <p>
-         We are passionate food lovers dedicated to bringing you the best dining experience.
-         Our mission is to serve fresh, high quality meals made with love and deleivered with care.
-         From quick bites to full meals, we ensure every order brings satisfaction and joy.
-
-      </p>
-   </section>
-   <!--End about section-->
-
-
-
-   <!-- This is footer section -->
-   <footer>
-      <div class="footer-container">
-         <div class="footer-box">
-            <h2>Bite<span>Box</span></h2>
-            <p>Delecious food Made ♥️ With and 🫂</p>
-         </div>
-
-         <!-- QUICK LINK -->
-
-         <div class="footer-box">
-            <h3>Quick Links</h3>
-            <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="menu.html">Menu</a></li>
-               <li><a href="Bitedeals.html">Bitedeals</a></li>
-               <li><a href="cart.html">Cart</a></li>
-            </ul>
-         </div>
-
-
-         <!-- CONTACT -->
-         <div class="footer-box">
-            <h3>Contact</h3>
-            <p>Email: Support on @gmail.com</p>
-            <p>Phone: +1234567890</p>
-
-
-
-         </div>
-
-
-         <div class="footer-box">
-            <h3>Follow Us On!!</h3>
-            <div class="social-icons">
-               <a href="#"><i class="fa-brands fa-instagram"></i></a>
-               <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-               <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-
-
-         </div>
+  <section class="section" style="padding-top: 10px;">
+    <div class="container">
+      <div class="video-showcase">
+        <div class="video-text">
+          <span class="hero-tag">Inside Our Kitchen</span>
+          <h2>Crafted Fresh, Every Single Order</h2>
+          <p>Watch our chefs fire up fresh ingredients, melt real cheese, and plate every BiteBox with care before it heads to your doorstep.</p>
+          <a href="menu.html" class="btn btn-primary">Taste the Craft</a>
+        </div>
+        <video autoplay muted loop playsinline controls>
+          <source src="css/image/media/food video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
       </div>
+    </div>
+  </section>
 
-
-
-      <!-- COPYRIGHT SECTION -->
-      <div class="footer-bottom">
-         <p>&copy;2026 Bitebox | All Rights Reserved</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Bite<span style="color:var(--primary);">Box</span></h3>
+          <p>Serving bold, fresh comfort food with fast doorstep delivery.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="biteDeals.html">Bite Deals</a></li>
+            <li><a href="track.html">Track Order</a></li>
+            <li><a href="cart.html">Your Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </div>
       </div>
+      <div class="footer-bottom">&copy; 2026 BiteBox. All rights reserved.</div>
+    </div>
+  </footer>
 
-
-
-
-
-   </footer>
-
-
-
+  <script src="js/scripts.js"></script>
 </body>
-
 </html>

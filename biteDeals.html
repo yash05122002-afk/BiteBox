@@ -1,145 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitedeals</title>
-    <script src="https://kit.fontawesome.com/4713f18eb9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="image/favicon/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bite Deals | BiteBox</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="css/image/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <nav>
 
-            <!--This is Logo-->
-            <img src="css/image/image.png" alt="logo" width="170px">
-            <ul>
-                <li><a href="home.html" class="active">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="biteDeals.html">BiteDeals</a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Cart</a></li>
-                <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a></li>
-            </ul>
-
-
-        </nav>
-    </header>
-    <!--Start deals Section-->
-
-    <section class="deals-page">
-
-        <!--hero banner-->
-        <div class="deal-hero">
-            <h1>BiteDeals</h1>
-            <p>Save more on your favorite meals</p>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand"><i class="fa-solid fa-burger" style="color: var(--primary);"></i> Bite<span>Box</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="biteDeals.html" class="active">Bite Deals</a></li>
+        <li><a href="track.html">Track Order</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn" aria-label="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <div id="auth-slot" style="display:flex; align-items:center; gap:10px;">
+          <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         </div>
-    </section>
-    <!--End deal section-->
+        <button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
 
+  <section class="page-banner">
+    <div class="container">
+      <span class="hero-tag">Limited Time Combos</span>
+      <h1>Super Saver Bite Deals</h1>
+      <p>Bundle your favorites and save up to 29%. Stack code <strong>BITE20</strong> at checkout for an extra 20% off!</p>
+    </div>
+  </section>
 
-    <!-- combo offer start here -->
-    <section class="combo-section">
-        <h2 class="section-title">Today's Combo Offer</h2>
+  <section class="section">
+    <div class="container">
+      <div class="grid" id="deals-grid"></div>
+    </div>
+  </section>
 
-        <div class="combo-container">
-            <!-- combo 1 -->
-            <div class="combo-card">
-                <img src="css/image/meal1 (1).jpg">
-                <h3>Burgers + fries</h3>
-                <p>perfect snack combo</p>
-                <h4><span>rs 399</span>rs 299</h4>
-                <button>Order</button>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">&copy; 2026 BiteBox. All rights reserved.</div>
+    </div>
+  </footer>
 
-
-            <!-- combo 2 -->
-            <div class="combo-card">
-                <img src="css/image/meal2 (1).jpg">
-                <h3>Pizza + coke</h3>
-                <p>perfect snack combo</p>
-                <h4><span>rs 399</span>rs 299</h4>
-                <button>Order</button>
-            </div>
-
-
-
-
-            <!-- combo 3 -->
-            <div class="combo-card">
-                <img src="css/image/meal3 (1).jpg">
-                <h3>Cheese Noodles + Tea</h3>
-                <p>Perfect Snack Combo</p>
-                <h4><span>rs 399</span>rs 299</h4>
-                <button>Order</button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- end of today combo offer -->
-
-
-
-    <!-- Day wise offers -->
-    <section class="deals-page">
-        <h2 class="section-title">Special Day Offers</h2>
-        <div class="deals-container">
-
-            <!-- first card -->
-            <div class="deal-card">
-                <h3>Friday Feast</h3>
-                <p>50%OFF on Burgers</p>
-                <span>Use code: FRI50</span>
-            </div>
-
-            <!-- second card -->
-            <div class="deal-card">
-                <h3>Saturday Special</h3>
-                <p>Buy 1 Get 1 Pizza free</p>
-                <span>Use code: SATPIZZA</span>
-            </div>
-
-
-
-            <div class="deal-card">
-                <h3>Sunday Treat</h3>
-                <p>FLAT 120 OFF</p>
-                <span>Use Code: FRI50</span>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Hot Deal Section -->
-    <section class="deals-page">
-        <h2 class="section-title">Hot Deals</h2>
-        <div class="deals-container">
-
-            <div class="deal-card red">
-                <h3>50% OFF</h3>
-                <p>On all Burgers</p>
-                <span>BURGER50</span>
-            </div>
-
-
-            <div class="deal-card yellow">
-                <h3>Free Delivery</h3>
-                <p>On First order</p>
-                <span>FREEDEL</span>
-            </div>
-
-
-            <div class="deal-card green">
-                <h3>Flat rs100 OFF</h3>
-                <p>Above Rs499</p>
-                <span>SAVE100</span>
-            </div>
-
-        </div>
-    </section>
+  <script src="js/scripts.js"></script>
 </body>
-
 </html>

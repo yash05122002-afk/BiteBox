@@ -4,132 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Your Cart | BiteBox</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="css/image/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/4713f18eb9.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="image/favicon/favicon.ico">
 </head>
 
 <body>
-    <header>
-        <nav>
 
-            <!--This is Logo-->
-            <img src="css/image/image.png" alt="logo" width="170px">
-            <ul>
-                <li><a href="home.html" class="active">Home</a></li>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand"><i class="fa-solid fa-burger" style="color: var(--primary);"></i>
+                Bite<span>Box</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="biteDeals.html">BiteDeals</a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i>Cart</a></li>
-                <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>login</a></li>
+                <li><a href="biteDeals.html">Bite Deals</a></li>
+                <li><a href="track.html">Track Order</a></li>
             </ul>
-
-
-        </nav>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn" aria-label="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+                <div id="auth-slot" style="display:flex; align-items:center; gap:10px;">
+                    <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+                </div>
+                <button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
     </header>
-    <!-- start cart section -->
-    <section class="cart">
-        <h2>Your Cart</h2>
 
-        <table>
+    <section class="page-banner">
+        <div class="container">
+            <h1>Your Cart</h1>
+            <p>Free delivery on orders ₹500 and above.</p>
+        </div>
+    </section>
 
-            <thead>
+    <section class="section">
+        <div class="container cart-layout">
+            <div class="cart-panel" id="cart-items"></div>
 
-                <th>Item</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>Total</th>
-                <th>Remove</th>
+            <aside class="summary-panel">
+                <h3 style="margin-bottom: 18px;">Order Summary</h3>
+                <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">₹0</span></div>
+                <div class="summary-row"><span>Delivery Fee</span><span id="summary-delivery">₹0</span></div>
+                <div class="summary-row"><span>GST (5%)</span><span id="summary-tax">₹0</span></div>
+                <div class="summary-row" style="color: var(--success);"><span>Discount</span><span
+                        id="summary-discount">-₹0</span></div>
+                <div class="summary-row summary-total"><span>Total</span><span id="summary-total">₹0</span></div>
 
-            </thead>
+                <div class="promo-group">
+                    <input type="text" id="promo-input" placeholder="Promo code (BITE20)">
+                    <button class="btn btn-outline btn-sm" id="apply-promo">Apply</button>
+                </div>
 
-            <tbody>
-                <tr>
-                    <td class="item">
-                        <img src="css/image/burgercheese.image.png">
-                        <div>
-                            <h4> Chessey Burger</h4>
-                            <p>Hot Burger</p>
-                        </div>
-                    </td>
-                    <td>₹100</td>
+                <button class="btn btn-primary btn-block" id="checkout-btn">Place Order</button>
+            </aside>
+        </div>
+    </section>
 
-                    <td>
-                        <div class="qty-box">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
-                        </div>
-                    </td>
+    <div class="modal-overlay" id="order-modal">
+        <div class="modal-box">
+            <i class="fa-solid fa-circle-check"
+                style="font-size: 3.5rem; color: var(--success); margin-bottom: 16px;"></i>
+            <h2>Order Confirmed!</h2>
+            <p style="color: var(--dark-muted); margin: 10px 0 6px;">Order ID: <strong id="modal-order-id"
+                    style="color: var(--dark);"></strong></p>
+            <p style="color: var(--dark-muted); margin-bottom: 24px;">Your BiteBox is being freshly prepared and will
+                reach you within 30 minutes.</p>
+            <div style="display:flex; gap:10px;">
+                <a href="track.html" id="modal-track-link" class="btn btn-primary btn-block">Track Order</a>
+                <a href="index.html" class="btn btn-outline btn-block">Home</a>
+            </div>
+        </div>
+    </div>
 
-                    <td>₹100</td>
-                    <td><button class="remove">❌</button></td>
-                </tr>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">&copy; 2026 BiteBox. All rights reserved.</div>
+        </div>
+    </footer>
 
-
-
-
-
-
-                <tr>
-
-                    <td class="item">
-                        <img src="css/image/cake.image.png">
-                        <div>
-                            <h4> Cake</h4>
-                            <p>Delecious Cake</p>
-                        </div>
-                    </td>
-                    <td>₹600</td>
-
-                    <td>
-                        <div class="qty-box">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
-                        </div>
-                    </td>
-
-                    <td>₹600</td>
-                    <td><button class="remove">❌</button></td>
-                </tr>
-
-
-                <tr>
-                    <td class="item">
-                        <img src="css/image/Cheesypasta.image.png">
-                        <div>
-                            <h4> Pasta</h4>
-                            <p>Cheesy pasta</p>
-                        </div>
-                    </td>
-                    <td>₹199</td>
-
-                    <td>
-                        <div class="qty-box">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
-                        </div>
-                    </td>
-
-                    <td>₹199</td>
-                    <td><button class="remove">❌</button></td>
-
-                </tr>
-
-
-
-                <tr class="grand-total">
-                    <td colspan="3">Grand total</td>
-                    <td>₹899</td>
-                    <td><button>Proceed</button></td>
-
-                </tr>
-
-            </tbody>
-        </table>
-
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
